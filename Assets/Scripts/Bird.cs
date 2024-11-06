@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BirdController : MonoBehaviour
+public class Bird: MonoBehaviour
 {
     public float speed = 2f; // Скорость движения птицы
     public float flightRange = 4f; // Диапазон полета (влево и вправо)
