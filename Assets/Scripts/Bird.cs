@@ -3,7 +3,7 @@ using UnityEngine;
 public class Bird: MonoBehaviour
 {
     public float speed = 2f; // Скорость движения птицы
-    public float flightRange = 4f; // Диапазон полета (влево и вправо)
+    public float flightRange = 5f; // Диапазон полета (влево и вправо)
     private Vector3 startPosition; // Начальная позиция птицы
     private bool movingRight = true; // Направление движения
 
