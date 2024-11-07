@@ -1,49 +1,25 @@
 using UnityEngine;
 
-public class Bird: MonoBehaviour
+public class Bird : MonoBehaviour
 {
-    public float speed = 2f; // Скорость движения птицы
-    public float flightRange = 5f; // Диапазон полета (влево и вправо)
-    private Vector3 startPosition; // Начальная позиция птицы
-    private bool movingRight = true; // Направление движения
+    public float speed = 5f; // Скорость движения птицы
 
-    private SpriteRenderer sprite; // Компонент SpriteRenderer
-
-    void Start()
-    {
-        startPosition = transform.position; // Сохраняем начальную позицию
-        sprite = GetComponentInChildren<SpriteRenderer>(); // Получаем компонент SpriteRenderer
-    }
+    private Vector2 direction;
 
     void Update()
     {
-        MoveBird();
+        // Двигаем птицу в заданном направлении
+        transform.Translate(direction * speed * Time.deltaTime);
+
+        // Удаляем птицу, если она выходит за пределы экрана
+        if (transform.position.x < -10f)
+        {
+            Destroy(gameObject);
+        }
     }
 
-    private void MoveBird()
+    public void SetDirection(Vector2 newDirection)
     {
-        // Определяем направление движения
-        if (movingRight)
-        {
-            transform.position += Vector3.right * speed * Time.deltaTime;
-
-            // Проверяем, достигли ли мы правой границы
-            if (transform.position.x >= startPosition.x + flightRange)
-            {
-                movingRight = false; // Меняем направление на влево
-                sprite.flipX = true; // Разворачиваем спрайт
-            }
-        }
-        else
-        {
-            transform.position -= Vector3.right * speed * Time.deltaTime;
-
-            // Проверяем, достигли ли мы левой границы
-            if (transform.position.x <= startPosition.x - flightRange)
-            {
-                movingRight = true; // Меняем направление на вправо
-                sprite.flipX = false; // Разворачиваем спрайт
-            }
-        }
+        direction = newDirection;
     }
 }
