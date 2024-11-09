@@ -10,7 +10,11 @@ public class CameraController : MonoBehaviour
     private void Awake()
     {
         if (!player)
+<<<<<<< Updated upstream
             player = FindObjectOfType<Hero>().transform;
+=======
+            player = FindObjectOfType<Dog>().transform;
+>>>>>>> Stashed changes
     }
     void Start()
     {
