@@ -5,7 +5,7 @@ using UnityEngine;
 public class Dog : MonoBehaviour
 {
     [SerializeField] private float speed = 3f; // скорость движения
-    [SerializeField] private float jump_force = 15f; // сила прыжка
+    [SerializeField] private float jump_force = 7f; // сила прыжка
     private bool is_grounded = false; // на земле ли объект
 
     private Rigidbody2D rigid_body; // ссылка на компонент
@@ -35,7 +35,10 @@ public class Dog : MonoBehaviour
     }
     void Update()
     {
-        if (is_grounded) State = States.idle; // состояние покоя
+        if (is_grounded)
+        {
+            State = States.idle; // состояние покоя
+        }
 
         if (Input.GetButton("Horizontal"))
         {
@@ -43,7 +46,7 @@ public class Dog : MonoBehaviour
         }
         if (is_grounded)
         {
-            if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow)) // проверка на нажатие пробела или стрелки вверх
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) // проверка на нажатие пробела или стрелки вверх
             {
                 Jump();
             }

@@ -1203,8 +1203,8 @@ Rigidbody2D:
   m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &901660227
 MonoBehaviour:
@@ -1219,7 +1219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  jump_force: 7
+  jump_force: 350
 --- !u!95 &901660228
 Animator:
   serializedVersion: 5
