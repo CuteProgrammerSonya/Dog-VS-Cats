@@ -4,7 +4,11 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
+<<<<<<< HEAD
   productGUID: f10990db6a32f0447a248dd968a8fbe3
+=======
+  productGUID: 8bc5c67413643c142b50715d61322cff
+>>>>>>> enemies
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +17,11 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
+<<<<<<< HEAD
   productName: design_levels
+=======
+  productName: test
+>>>>>>> enemies
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -630,14 +638,22 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
+<<<<<<< HEAD
   metroPackageName: design_levels
+=======
+  metroPackageName: test
+>>>>>>> enemies
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
+<<<<<<< HEAD
   metroApplicationDescription: design_levels
+=======
+  metroApplicationDescription: test
+>>>>>>> enemies
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -706,11 +722,19 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
+<<<<<<< HEAD
   cloudProjectId: 03e92f9b-1c8e-4999-814a-e67f6c7ede14
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: design_levels
   organizationId: ilya_manakov
+=======
+  cloudProjectId: 09b6730b-b162-44cb-ab8b-4c9044dc2f73
+  framebufferDepthMemorylessMode: 0
+  qualitySettingsNames: []
+  projectName: test
+  organizationId: egsesekina
+>>>>>>> enemies
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
