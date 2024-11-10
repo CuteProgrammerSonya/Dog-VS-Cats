@@ -13,8 +13,7 @@ public class BirdSpawner : MonoBehaviour
     void SpawnBird()
     {
         // Создаем птицу в случайной позиции по вертикали
-        Vector3 spawnPosition = new Vector3(10f, Random.Range(-0f, 4f), 0f);
+        Vector3 spawnPosition = new Vector3(50f, Random.Range(-3f, 1f), 0f);
         GameObject bird = Instantiate(birdPrefab, spawnPosition, Quaternion.identity);
-        bird.GetComponent<Bird>().SetDirection(Vector2.left); // Устанавливаем направление движения
     }
 }
