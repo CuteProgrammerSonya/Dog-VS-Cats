@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3823602905372757924}
   - component: {fileID: 6604633236475931734}
   - component: {fileID: 4580788904699534148}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 360_F_590916611_k9qJ90tq11yDuCoJwOt3eiQ2Wk1FqMhp_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 4449751761275663736}
   - component: {fileID: 1009272390223966156}
   - component: {fileID: 332532408149850984}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy(bird)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
