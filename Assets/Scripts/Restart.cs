@@ -26,4 +26,14 @@ public class Restart : MonoBehaviour
     {
         transform.position = startPosition;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // Проверяем, является ли объект врагом
+        if (collision.CompareTag("enemy")) // Убедитесь, что у врагов установлен тег "Enemy"
+        {
+            transform.position = startPosition;
+            // Здесь можно добавить логику, например, потерю здоровья или уничтожение героя
+        }
+    }
 }
