@@ -3,9 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+<<<<<<< HEAD
   tags:
   - platform
   - enemy
+=======
+  tags: []
+>>>>>>> main_menu
   layers:
   - Default
   - TransparentFX
@@ -13,8 +17,13 @@ TagManager:
   - 
   - Water
   - UI
+<<<<<<< HEAD
   - tiles
   - birds
+=======
+  - 
+  - 
+>>>>>>> main_menu
   - 
   - 
   - 
