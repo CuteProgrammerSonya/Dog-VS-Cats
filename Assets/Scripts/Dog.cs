@@ -68,7 +68,7 @@ public class Dog : MonoBehaviour
 
     private void CheckGrounded()
     {
-        Collider2D[] collider = Physics2D.OverlapCircleAll(transform.position, 0.3f); // массив коллайдеров
+        Collider2D[] collider = Physics2D.OverlapBoxAll(transform.position, new Vector2(1.4f, 0.3f),0f); // массив коллайдеров
         is_grounded = collider.Length > 1; // если есть коллайдер под ногами, то мы на земле
         if (!is_grounded) State = States.jump; // если не стоим на земле - прыгаем
     }
