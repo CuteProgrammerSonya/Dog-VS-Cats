@@ -35,21 +35,27 @@ public class MovingPlatform : MonoBehaviour
             player.position += new Vector3(movement.x, 0, 0);
         }
     }
-
+    // первый контакт коллайдера объекта с другим объектом
     void OnCollisionEnter2D(Collision2D collision)
     {
+        // имеет ли объект, с которым произошёл контакт, тег "Player"
         if (collision.gameObject.CompareTag("Player"))
         {
+            // присваиваю ссылку на объект игрока, чтобы можно было работать с ним
             player = collision.transform;
+            // игрок находится на платформе - флажок
             playerOnPlatform = true;
         }
     }
-
+    // объект покидает контакт с другим объектом
     void OnCollisionExit2D(Collision2D collision)
     {
+        // объект, с которым завершён контакт, имеет тег "Player"
         if (collision.gameObject.CompareTag("Player"))
         {
+            // игрок больше не на платформе
             playerOnPlatform = false;
+            // обнуляется ссылка на объект игррка
             player = null;
         }
     }
