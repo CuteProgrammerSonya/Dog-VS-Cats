@@ -8,13 +8,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: c8e369e1f29dcbd438cee930a9902d17
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/2.unity
     guid: f7d7456bf90c33f40859210151d33ad9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/3.unity
     guid: 83860e793cc30d048ab1348c60798e8c
+  - enabled: 1
+    path: Assets/Scenes/1_music.unity
+    guid: ba7ca69fcc608eb45bfbc56fb030e338
+  - enabled: 1
+    path: Assets/Scenes/2_music.unity
+    guid: 9c016a53b1d30d44b9f6d485d3faf4da
+  - enabled: 1
+    path: Assets/Scenes/3_music.unity
+    guid: 67daa6f1a0280104d9582a507e257b0c
   m_configObjects: {}
