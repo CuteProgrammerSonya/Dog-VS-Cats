@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class MainMenuController : MonoBehaviour
 {
     // название первого уровня для кнопки старт
-    [SerializeField] private string firstLevelName = "1_music";
+    [SerializeField] private string firstLevelName = "1";
 
     // функция для кнопки "Начать"
     public void StartGame()

@@ -6163,7 +6163,7 @@ GameObject:
   - component: {fileID: 1190629101}
   - component: {fileID: 1190629100}
   m_Layer: 0
-  m_Name: Return_to_menu
+  m_Name: ReturnToMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7559,7 +7559,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8242064641816064564, guid: 0978b4f6e9480f54fa1eb824c4afb855, type: 3}
       propertyPath: m_Name
-      value: Enemy(bird) (2)
+      value: Enemy(bird)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

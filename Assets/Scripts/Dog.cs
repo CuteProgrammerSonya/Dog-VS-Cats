@@ -79,11 +79,8 @@ public class Dog : MonoBehaviour
     // Новый метод для обработки столкновений
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Объект вошел в триггер!");
         if (collision.CompareTag("enemy"))
         {
-            Debug.Log("Собака столкнулась с врагом (триггер)!");
-
             if (audioSource != null)
             {
                 audioSource.Stop(); // Останавливаем предыдущий звук (если нужно)

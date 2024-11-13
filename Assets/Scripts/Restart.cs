@@ -29,10 +29,9 @@ public class Restart : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // объект - враг?
         if (collision.CompareTag("enemy")) 
         {
-            transform.position = startPosition;
+            ResetPosition();
         }
     }
 }
