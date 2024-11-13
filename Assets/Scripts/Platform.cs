@@ -4,43 +4,51 @@ using UnityEngine;
 
 public class Platform : MonoBehaviour
 {
+    // переменная для направления движения; true — движение вправо
     private bool moveRight = true;
+    // скорость движения платформы
     private float speed = 2f;
+    // левая граница движения платформы
     private float leftBoundary = 19.10f;
+    // правая граница движения платформы
     private float rightBoundary = 20.10f;
 
     void Update()
     {
-        // Проверка границ и смена направления
+        // проверка, достигла ли платформа правой границы, чтобы сменить направление на "влево"
         if (transform.position.x >= rightBoundary)
         {
             moveRight = false;
         }
+        // проверка, достигла ли платформа левой границы, чтобы сменить направление на "вправо"
         else if (transform.position.x <= leftBoundary)
         {
             moveRight = true;
         }
 
-        // Движение платформы
+        // установка направления движения: 1, если вправо; -1, если влево
         float direction = moveRight ? 1 : -1;
+        // изменение позиции платформы в зависимости от направления, скорости и времени между кадрами
         transform.position = new Vector2(transform.position.x + direction * speed * Time.deltaTime, transform.position.y);
     }
 
+    // метод вызывается, когда объект находится в контакте с платформой
     private void OnCollisionStay2D(Collision2D collision)
     {
-        // Only attach specific objects (e.g., the player) to the moving platform
+        // проверяем, если объект имеет тег "Player" (например, персонаж)
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.transform.SetParent(transform); // Set parent to the platform
+            collision.transform.SetParent(transform); // установка родительского объекта для игрока, чтобы он двигался вместе с платформой
         }
     }
 
+    // метод вызывается, когда объект покидает контакт с платформой
     private void OnCollisionExit2D(Collision2D collision)
     {
-        // Remove parent relationship when leaving the platform
+        // проверка, если объект имеет тег "Player"
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.transform.SetParent(null); // Remove parent
+            collision.transform.SetParent(null); // снятие родительского объекта, чтобы игрок больше не двигался вместе с платформой
         }
     }
 }

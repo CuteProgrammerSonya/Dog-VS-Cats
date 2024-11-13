@@ -6,13 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class Finish : MonoBehaviour
 {
+    // метод вызывается, когда объект входит в триггер (коллайдер с включённым IsTrigger)
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Проверяем, что в триггер попал объект с тегом "Player"
+        // проверка, что в триггер попал объект с тегом "Player"
         if (other.CompareTag("Player"))
         {
-            // Получаем индекс текущей сцены и загружаем следующую
+            // получили индекс текущей сцены и загружаем следующую
             int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            // загружаем следующую сцену, используя индекс текущей сцены + 1
             SceneManager.LoadScene(currentSceneIndex + 1);
         }
     }
